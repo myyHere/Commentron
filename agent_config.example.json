@@ -1,0 +1,11 @@
+{
+  "runtime": {
+    "backend": "openai",
+    "model": "deepseek-v4-flash",
+    "api_base": "https://api.deepseek.com/chat/completions",
+    "api_mode": "chat",
+    "api_key": "",
+    "proxy": null,
+    "output_dir": "outputs/latest"
+  }
+}

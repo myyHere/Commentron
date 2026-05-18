@@ -1,0 +1,98 @@
+[
+  {
+    "subreddit": "wallstreetbets",
+    "topic": "big tech politics",
+    "score": 18300,
+    "style": "one_line_summary",
+    "body": "Amazing how free markets always end up needing a VIP entrance.",
+    "tags": ["big tech", "markets", "politics", "regulation", "sarcasm"]
+  },
+  {
+    "subreddit": "technology",
+    "topic": "corporate strategy",
+    "score": 9200,
+    "style": "debate_hook",
+    "body": "If a company can spend billions to avoid a policy, maybe the policy was never being applied evenly in the first place?",
+    "tags": ["corporate strategy", "policy", "fairness", "question"]
+  },
+  {
+    "subreddit": "economics",
+    "topic": "tariffs and incentives",
+    "score": 7800,
+    "style": "sharp_take",
+    "body": "This is less capitalism than subscription-based access to favorable rules.",
+    "tags": ["tariffs", "incentives", "capitalism", "critique"]
+  },
+  {
+    "subreddit": "news",
+    "topic": "market reactions",
+    "score": 6200,
+    "style": "dry_joke",
+    "body": "Wall Street saw one patriotic press release and immediately priced in regulatory forgiveness.",
+    "tags": ["markets", "patriotism", "regulation", "joke"]
+  },
+  {
+    "subreddit": "politics",
+    "topic": "election optics",
+    "score": 8300,
+    "style": "role_reversal",
+    "body": "The state says jump, the company says how high, and investors call it innovation.",
+    "tags": ["election", "optics", "investors", "irony"]
+  },
+  {
+    "subreddit": "finance",
+    "topic": "capital allocation",
+    "score": 5100,
+    "style": "probing_question",
+    "body": "How much of this is long-term investment, and how much is just the world's most expensive insurance premium?",
+    "tags": ["investment", "insurance", "question", "capital allocation"]
+  },
+  {
+    "subreddit": "apple",
+    "topic": "ipad deals",
+    "score": 6400,
+    "style": "dry_joke",
+    "body": "Every Apple deal is just a coupon for convincing yourself you needed the upgrade anyway.",
+    "tags": ["ipad", "apple", "deal", "discount", "upgrade"]
+  },
+  {
+    "subreddit": "buildapcsales",
+    "topic": "consumer deal skepticism",
+    "score": 7100,
+    "style": "probing_question",
+    "body": "Is this actually a great price, or is it just the exact configuration most people would never have chosen without a sale tag?",
+    "tags": ["deal", "sale", "configuration", "consumer tech", "question"]
+  },
+  {
+    "subreddit": "gadgets",
+    "topic": "tablet pricing",
+    "score": 5600,
+    "style": "one_line_summary",
+    "body": "Tech discounts are how companies turn hesitation into urgency.",
+    "tags": ["tablet", "pricing", "discount", "urgency", "consumer"]
+  },
+  {
+    "subreddit": "stocks",
+    "topic": "earnings valuation",
+    "score": 8400,
+    "style": "sharp_take",
+    "body": "A great quarter is not the same thing as a cheap stock.",
+    "tags": ["earnings", "valuation", "stocks", "investors", "critique"]
+  },
+  {
+    "subreddit": "investing",
+    "topic": "cash flow skepticism",
+    "score": 7900,
+    "style": "probing_question",
+    "body": "If the income statement looks amazing but free cash flow is evaporating, which version of the business are you actually buying?",
+    "tags": ["free cash flow", "cash flow", "earnings", "question", "valuation"]
+  },
+  {
+    "subreddit": "technology",
+    "topic": "cloud competition",
+    "score": 6100,
+    "style": "debate_hook",
+    "body": "At what point does 'market leader' just become shorthand for 'most exposed incumbent'?",
+    "tags": ["aws", "cloud", "competition", "question", "earnings"]
+  }
+]

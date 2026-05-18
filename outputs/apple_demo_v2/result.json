@@ -1,0 +1,198 @@
+{
+  "news_input": {
+    "source_id": "apple-investment-demo",
+    "title": "Apple's $100 billion investment sparks rally and hints at a tariff carveout playbook",
+    "url": "https://www.ainvest.com/news/apple-100-billion-investment-sparks-market-rally-offers-glimpse-trump-tariff-carveout-framework-2508/",
+    "body": "Apple announced a massive $100 billion US investment plan, and markets treated it like both a patriotic headline and a potential roadmap for winning tariff relief. Bulls read it as industrial policy meeting corporate strategy. Critics read it as a costly political toll booth. The story mixes capital spending, election-era signaling, and the idea that the biggest companies can buy certainty while everyone else pays retail.",
+    "image_descriptions": [
+      "A polished Apple logo displayed during a corporate event, signaling scale, prestige, and message discipline.",
+      "A market-themed hero image implying investor excitement rather than factory-floor detail."
+    ],
+    "image_urls": [],
+    "local_image_paths": [],
+    "metadata": {
+      "topic_tags": [
+        "apple",
+        "tariffs",
+        "investment",
+        "markets",
+        "politics",
+        "industrial policy"
+      ],
+      "audience": "general finance readers"
+    }
+  },
+  "understanding": {
+    "summary": "Apple's $100 billion investment sparks rally and hints at a tariff carveout playbook. Apple announced a massive $100 billion US investment plan, and markets treated it like both a patriotic headline and a potential roadmap for winning tariff relief.",
+    "core_claim": "The article suggests Apple's investment is not just economic expansion, but a strategic move to secure political and tariff advantages.",
+    "tone": "skeptical and sharp",
+    "controversies": [
+      "Policy favoritism",
+      "Politics shaping business",
+      "Market hype versus real impact"
+    ],
+    "humor_hooks": [
+      "Money as a shortcut to exceptions",
+      "Patriotism as investor catnip",
+      "Corporate lobbying disguised as strategy"
+    ],
+    "debate_hooks": [
+      "Is this genuine investment or a political fee?",
+      "Do only giant firms get policy flexibility?",
+      "Should investors celebrate rule-shopping?"
+    ],
+    "visual_hooks": [
+      "A polished Apple logo displayed during a corporate event, signaling scale, prestige, and message discipline",
+      "A market-themed hero image implying investor excitement rather than factory-floor detail"
+    ],
+    "evidence": [
+      "Apple announced a massive $100 billion US investment plan, and markets treated it like both a patriotic headline and a potential roadmap for winning tariff relief.",
+      "Bulls read it as industrial policy meeting corporate strategy.",
+      "Critics read it as a costly political toll booth."
+    ]
+  },
+  "reference_comments": [
+    {
+      "subreddit": "wallstreetbets",
+      "topic": "big tech politics",
+      "score": 18300,
+      "style": "one_line_summary",
+      "body": "Amazing how free markets always end up needing a VIP entrance.",
+      "tags": [
+        "big tech",
+        "markets",
+        "politics",
+        "regulation",
+        "sarcasm"
+      ]
+    },
+    {
+      "subreddit": "economics",
+      "topic": "tariffs and incentives",
+      "score": 7800,
+      "style": "sharp_take",
+      "body": "This is less capitalism than subscription-based access to favorable rules.",
+      "tags": [
+        "tariffs",
+        "incentives",
+        "capitalism",
+        "critique"
+      ]
+    },
+    {
+      "subreddit": "news",
+      "topic": "market reactions",
+      "score": 6200,
+      "style": "dry_joke",
+      "body": "Wall Street saw one patriotic press release and immediately priced in regulatory forgiveness.",
+      "tags": [
+        "markets",
+        "patriotism",
+        "regulation",
+        "joke"
+      ]
+    },
+    {
+      "subreddit": "finance",
+      "topic": "capital allocation",
+      "score": 5100,
+      "style": "probing_question",
+      "body": "How much of this is long-term investment, and how much is just the world's most expensive insurance premium?",
+      "tags": [
+        "investment",
+        "insurance",
+        "question",
+        "capital allocation"
+      ]
+    }
+  ],
+  "derived_patterns": [
+    {
+      "style": "一针见血",
+      "structure": "Compressed verdict with a sarcastic twist.",
+      "when_to_use": "Use when the article can be reduced to one unfair but memorable truth.",
+      "risk_level": "medium",
+      "example_pattern": "Amazing how free markets always end up needing a VIP entrance.",
+      "source_comment": "Amazing how free markets always end up needing a VIP entrance."
+    },
+    {
+      "style": "一针见血",
+      "structure": "Blunt reframing that names the hidden incentive.",
+      "when_to_use": "Use when the post already hints at a cynical interpretation.",
+      "risk_level": "high",
+      "example_pattern": "This is less capitalism than subscription-based access to favorable rules.",
+      "source_comment": "This is less capitalism than subscription-based access to favorable rules."
+    },
+    {
+      "style": "抖机灵",
+      "structure": "Deadpan line that exaggerates the market's reaction.",
+      "when_to_use": "Use when investor behavior looks absurd.",
+      "risk_level": "low",
+      "example_pattern": "Wall Street saw one patriotic press release and immediately priced in regulatory forgiveness.",
+      "source_comment": "Wall Street saw one patriotic press release and immediately priced in regulatory forgiveness."
+    },
+    {
+      "style": "反问式",
+      "structure": "Question that forces readers to choose between two motives.",
+      "when_to_use": "Use when the article leaves strategic ambiguity.",
+      "risk_level": "low",
+      "example_pattern": "How much of this is long-term investment, and how much is just the world's most expensive insurance premium?",
+      "source_comment": "How much of this is long-term investment, and how much is just the world's most expensive insurance premium?"
+    }
+  ],
+  "candidate_comments": [
+    {
+      "style": "引发争论",
+      "body": "如果1000亿投资能换来关税豁免暗示，那这到底是产业政策，还是只有巨头买得起的VIP通道？",
+      "target_emotion": "争辩欲",
+      "expected_engagement": "high",
+      "risk_notes": "争议度高，容易引战。",
+      "rationale": "围绕“Is this genuine investment or a political fee?”把读者拉进公平性讨论。",
+      "score": 7.5
+    },
+    {
+      "style": "反问式",
+      "body": "真正让市场兴奋的，究竟是Apple要投钱，还是大家默认‘规则对大公司总有商量空间’？",
+      "target_emotion": "思考欲",
+      "expected_engagement": "medium-high",
+      "risk_notes": "语气克制，但锋芒仍然明显。",
+      "rationale": "保留怀疑语气，用问题推动回复。 参考的互动模式：Question that forces readers to choose between two motives.",
+      "score": 7.0
+    },
+    {
+      "style": "一针见血",
+      "body": "翻译一下：这新闻表面叫投资，里子更像是花大钱买政策确定性。",
+      "target_emotion": "认同感",
+      "expected_engagement": "high",
+      "risk_notes": "偏尖锐，可能被认为过度简化。",
+      "rationale": "直接压缩文章核心观点，贴近“The article suggests Apple's investment is not just economic expansion, but a strategic move to secure political and tariff advantages.”。 参考的互动模式：Blunt reframing that names the hidden incentive.",
+      "score": 6.4
+    },
+    {
+      "style": "抖机灵",
+      "body": "华尔街现在可能已经把“爱国新闻稿”当成新型宽松政策来交易了。",
+      "target_emotion": "会心一笑",
+      "expected_engagement": "medium-high",
+      "risk_notes": "依赖读者理解市场语境。",
+      "rationale": "借用市场亢奋和“Money as a shortcut to exceptions”这个槽点做冷幽默。 参考的互动模式：Deadpan line that exaggerates the market's reaction.",
+      "score": 6.2
+    }
+  ],
+  "best_comment": {
+    "style": "引发争论",
+    "body": "如果1000亿投资能换来关税豁免暗示，那这到底是产业政策，还是只有巨头买得起的VIP通道？",
+    "target_emotion": "争辩欲",
+    "expected_engagement": "high",
+    "risk_notes": "争议度高，容易引战。",
+    "rationale": "围绕“Is this genuine investment or a political fee?”把读者拉进公平性讨论。",
+    "score": 7.5
+  },
+  "visual_prompt": {
+    "concept": "用企业光鲜表象对比规则灵活性的讽刺图",
+    "prompt": "Create a satirical editorial illustration. Scene: A polished Apple logo displayed during a corporate event, signaling scale, prestige, and message discipline. Add a velvet-rope VIP lane labeled 'tariff carveout' while ordinary businesses wait in a long standard line. Overlay mood matching this comment: 如果1000亿投资能换来关税豁免暗示，那这到底是产业政策，还是只有巨头买得起的VIP通道？ Style should feel like a sharp magazine cover, clean, ironic, and finance-news friendly."
+  },
+  "execution": {
+    "backend": "heuristic",
+    "model": "heuristic-rules"
+  }
+}
