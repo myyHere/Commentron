@@ -37,14 +37,6 @@ python3 main.py --url "https://example.com/news"
 
 如果使用 `openai` 后端，会额外调用你配置的模型完成分析、生成和排序。
 
-## 当前行为
-- 只接受 `--url`
-- 只返回一条主推评论
-- 不再支持 `--sample`
-- 不再支持 `--input-file`
-- 不再支持 `--text-file`
-- 不再写 `result.json` 或 `report.md`
-
 ## Reddit 参考评论
 - 优先通过搜索引擎查找相关 Reddit 帖子
 - 再抓取帖子可读内容提取评论
