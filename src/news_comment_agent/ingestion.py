@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 import re
 from gzip import decompress as gzip_decompress
-from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
 from urllib.request import ProxyHandler, Request, build_opener
@@ -17,41 +16,7 @@ DEFAULT_USER_AGENT = (
     "Chrome/124.0.0.0 Safari/537.36"
 )
 
-SAMPLE_URL_ALIASES = {
-    "https://www.ainvest.com/news/apple-100-billion-investment-sparks-market-rally-offers-glimpse-trump-tariff-carveout-framework-2508/": "apple_news",
-    "https://www.ainvest.com/news/apple-100-billion-investment-sparks-market-rally-offers-glimpse-trump-tariff-carveout-framework-2508": "apple_news",
-}
-
-
-def load_sample(sample_name: str) -> NewsInput:
-    path = Path(__file__).with_name("sample_data") / f"{sample_name}.json"
-    data = json.loads(path.read_text(encoding="utf-8"))
-    return NewsInput(**data)
-
-
-def load_json_file(path: str) -> NewsInput:
-    data = json.loads(Path(path).read_text(encoding="utf-8"))
-    return NewsInput(**data)
-
-
-def load_text_file(path: str, title: str | None = None, source_url: str | None = None) -> NewsInput:
-    file_path = Path(path)
-    body = file_path.read_text(encoding="utf-8")
-    resolved_title = title or file_path.stem.replace("_", " ").replace("-", " ").strip() or "Text Input"
-    return NewsInput(
-        source_id=_slugify(resolved_title),
-        title=resolved_title,
-        url=source_url,
-        body=body,
-        image_descriptions=[],
-        metadata={
-            "fetch_mode": "text_file",
-            "source_path": str(file_path),
-        },
-    )
-
-
-def fetch_url_as_text(url: str, allow_sample_fallback: bool = False) -> NewsInput:
+def fetch_url_as_text(url: str) -> NewsInput:
     normalized_url = _normalize_url(url)
     try:
         html, final_url = _fetch_with_redirects(normalized_url)
@@ -62,22 +27,8 @@ def fetch_url_as_text(url: str, allow_sample_fallback: bool = False) -> NewsInpu
         reader_fallback = _try_fetch_via_reader(normalized_url)
         if reader_fallback is not None:
             return reader_fallback
-        sample_name = SAMPLE_URL_ALIASES.get(normalized_url)
-        if allow_sample_fallback and sample_name:
-            news_input = load_sample(sample_name)
-            news_input.metadata = {
-                **news_input.metadata,
-                "fetch_mode": "sample_fallback",
-                "fetch_error": _format_fetch_error(exc),
-                "requested_url": normalized_url,
-            }
-            return news_input
         raise RuntimeError(
-            _build_fetch_error_message(
-                normalized_url,
-                exc,
-                fallback_available=bool(sample_name),
-            )
+            _build_fetch_error_message(normalized_url, exc)
         ) from exc
 
     title = _extract_title(html, normalized_url)
@@ -266,7 +217,7 @@ def _try_fetch_zhihu_answer(url: str, exc: Exception) -> NewsInput | None:
     try:
         with opener.open(request, timeout=10) as response:
             payload = json.loads(_read_response_text(response))
-    except (HTTPError, URLError, json.JSONDecodeError):
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
         return None
 
     question = payload.get("question") or {}
@@ -315,7 +266,7 @@ def _try_fetch_via_reader(url: str) -> NewsInput | None:
     try:
         with opener.open(request, timeout=15) as response:
             markdown = _read_response_text(response)
-    except (HTTPError, URLError):
+    except (HTTPError, URLError, TimeoutError):
         return None
 
     title, body = _extract_reader_content(markdown, fallback_url=url)
@@ -374,24 +325,17 @@ def _format_fetch_error(exc: Exception) -> str:
     return str(reason)
 
 
-def _build_fetch_error_message(url: str, exc: URLError, fallback_available: bool = False) -> str:
+def _build_fetch_error_message(url: str, exc: URLError) -> str:
     reason = _format_fetch_error(exc)
     message = (
         f"Unable to fetch URL: {url}. "
         f"Network error: {reason}. "
         "This often means the site blocked the request, the local proxy/network refused the connection, "
-        "or outbound HTTPS is unavailable. No article analysis was produced from this URL. "
-        "Try --input-file with saved article text."
+        "or outbound HTTPS is unavailable. No article analysis was produced from this URL."
     )
     if "zhihu.com" in url and "403" in reason:
         message = (
             f"{message} "
-            "Zhihu commonly blocks unauthenticated scraping requests, so the practical path is to copy the answer text "
-            "into a local .txt/.md file and run it with --text-file."
-        )
-    if fallback_available:
-        message = (
-            f"{message} "
-            "A bundled sample exists for this URL, but it is only used if you explicitly pass --allow-sample-fallback."
+            "Zhihu commonly blocks unauthenticated scraping requests."
         )
     return message

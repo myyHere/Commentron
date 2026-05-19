@@ -18,8 +18,9 @@ class AppConfig:
     api_mode: str | None = None
     api_key: str | None = None
     proxy: str | None = None
-    output_dir: str = "outputs/latest"
-    source_path: str | None = None
+    reddit_user_agent: str | None = None
+    reddit_search_limit: int = 6
+    reddit_comment_limit: int = 6
 
 
 def load_app_config(path: str | None = None) -> AppConfig:
@@ -35,6 +36,7 @@ def load_app_config(path: str | None = None) -> AppConfig:
 
     data = json.loads(config_path.read_text(encoding="utf-8"))
     runtime = data.get("runtime", data)
+    reddit = data.get("reddit", {})
     return AppConfig(
         backend=_string_value(runtime.get("backend"), "heuristic"),
         model=_string_value(runtime.get("model"), "gpt-4.1-mini"),
@@ -42,8 +44,9 @@ def load_app_config(path: str | None = None) -> AppConfig:
         api_mode=_optional_string(runtime.get("api_mode")),
         api_key=_optional_string(runtime.get("api_key")),
         proxy=_optional_string(runtime.get("proxy")),
-        output_dir=_string_value(runtime.get("output_dir"), "outputs/latest"),
-        source_path=str(config_path),
+        reddit_user_agent=_optional_string(reddit.get("user_agent")),
+        reddit_search_limit=_int_value(reddit.get("search_limit"), 6),
+        reddit_comment_limit=_int_value(reddit.get("comment_limit"), 6),
     )
 
 
@@ -57,3 +60,12 @@ def _optional_string(value: Any) -> str | None:
     if value in (None, ""):
         return None
     return str(value)
+
+
+def _int_value(value: Any, default: int) -> int:
+    if value in (None, ""):
+        return default
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
